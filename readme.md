@@ -22,7 +22,7 @@ The YouTube Downloader API allows users to download YouTube videos by sending a 
 
 Before using the YouTube Downloader API, make sure you have the following prerequisites:
 
-- Node.js (version 18.8.0)
+- Node.js (Recommended version: 14.0.0 or higher)
 - npm (Node Package Manager)
 
 ### 3. Installation
@@ -42,6 +42,7 @@ To install and set up the YouTube Downloader API:
    ```
 
 3. Start the server:
+
    ```
    node app.js
    ```
@@ -66,32 +67,24 @@ To use the YouTube Downloader API:
    }
    ```
 
-4. Send the request.
+4. Send the request. If the API is hosted online, replace `http://localhost:7000` with the actual deployment URL.
 
 ### 5. Response Format
 
 Upon successful download, the API will respond with a JSON object:
 
-```json
-{
-  "success": true,
-  "message": "Download completed!",
-  "videoTitle": "Video Title"
-}
-```
+- `success` (boolean): Indicates whether the download was successful.
+- `message` (string): A message indicating the result of the download.
+- `videoTitle` (string): The title of the downloaded video.
 
 ### 6. Error Handling
 
 If an error occurs, the API response will contain an error message:
 
-```json
-{
-  "success": false,
-  "message": "Error",
-  "error": "Error message"
-}
-```
+- `success` (boolean): Indicates whether an error occurred.
+- `message` (string): A message indicating that an error occurred.
+- `error` (string): A detailed error message describing the issue.
 
 ### 7. Conclusion
 
-The YouTube Downloader API provides a simple way to download YouTube videos programmatically. By following this documentation, you can set up the API, make requests, and retrieve video files efficiently.
+The YouTube Downloader API provides a simple way to download YouTube videos programmatically. By following this documentation, you can set up the API, make requests, and retrieve video files efficiently. Feel free to explore and integrate the API into your projects, and if you have any questions or issues, please contact on nameste380@gmail.com

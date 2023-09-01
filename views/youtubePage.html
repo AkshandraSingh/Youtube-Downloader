@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube-Downloader</title>
+    <!-- <link rel="stylesheet" href="/CSS/youtube.css"> -->
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300&display=swap");
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-image: url("https://wallpapercave.com/wp/wp6595453.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 34px;
+            font-family: "ADLaM Display", cursive;
+        }
+
+        .mainContent {
+            width: 384px;
+            height: 276px;
+            border-radius: 22px;
+            margin: auto;
+            padding: 27px;
+        }
+
+        span {
+            color: white;
+            text-align: center;
+            margin-right: 15px;
+            margin-bottom: 22px;
+            font-family: "Nanum Gothic", sans-serif;
+        }
+
+        input {
+            width: 230px;
+            height: 28px;
+            border-radius: 10px;
+            font-family: "Bricolage Grotesque", sans-serif;
+            color: black;
+        }
+
+        button {
+            width: 118px;
+            height: 35px;
+            border-radius: 13px;
+            margin-top: 22px;
+            margin-left: 104px;
+            background-color: rgb(88, 202, 103);
+            font-family: "Ubuntu", sans-serif;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: rgb(109, 109, 236);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Youtube Video Downloader ✌🏻</h1>
+    <div class="mainContent">
+        <form action="/videoDownloader" method="post">
+            <span>Video Link</span>
+            <input type="text" placeholder="Paste Youtube Video Link" name="videoUrl">
+            <br>
+            <button>Download Video</button>
+        </form>
+    </div>
+</body>
+
+</html>

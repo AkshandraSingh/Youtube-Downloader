@@ -17,12 +17,7 @@ module.exports = {
             const outputStream = fs.createWriteStream(outputFilePath);
             videoStream.pipe(outputStream);
             videoStream.on('end', () => {
-                res.status(200).json({
-                    success: true,
-                    message: 'Download completed!',
-                    videoTitle: videoTitle,
-                    videoInfo: videoInfo,
-                });
+                res.sendFile(path.join(__dirname, '..', 'views', 'thanksPage.html'));
             });
             videoStream.on('error', (error) => {
                 console.error('Error:', error);
