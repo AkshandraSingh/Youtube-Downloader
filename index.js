@@ -3,6 +3,7 @@ const express = require('express')
 const bodyParser = require('body-parser');
 
 const router = require('./routes/youtubeRoutes')
+const logger = require('./utils/logger')
 
 const app = express()
 
@@ -14,4 +15,7 @@ const PORT = process.env.PORT || 8000
 
 app.listen(PORT, () => {
     console.log('Server is running on ', PORT)
+    console.log(`Server link: http://localhost:${PORT}`)
+    logger.log('info', `Server is running on ${PORT} `)
+    logger.log('info', `Server link: http://localhost:${PORT}`)
 })

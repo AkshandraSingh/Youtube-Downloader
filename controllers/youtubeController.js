@@ -2,6 +2,8 @@ const youtube = require('ytdl-core');
 const fs = require('fs');
 const path = require('path');
 
+const youtubeLogger = require('../utils/youtubeLogger/youtubeLogger')
+
 module.exports = {
     youtubeDownloader: async (req, res) => {
         try {
@@ -18,9 +20,10 @@ module.exports = {
             videoStream.pipe(outputStream);
             videoStream.on('end', () => {
                 res.sendFile(path.join(__dirname, '..', 'views', 'thanksPage.html'));
+                youtubeLogger.log('info', "Video successfully downloaded")
             });
             videoStream.on('error', (error) => {
-                console.error('Error:', error);
+                youtube.log('error', `Error: ${error.message}`)
                 res.status(500).json({
                     success: false,
                     message: 'Error',
@@ -28,7 +31,7 @@ module.exports = {
                 });
             });
         } catch (error) {
-            console.error('Error:', error);
+            youtube.log('error', `Error: ${error.message}`)
             res.status(500).json({
                 success: false,
                 message: 'Error',
